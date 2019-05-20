@@ -8,7 +8,7 @@ class Layout extends Component {
     render() {
         return (
             <Fragment>
-                <header>
+                <header className = {styles.header}>
                     <Toolbar />
                 </header>
 
