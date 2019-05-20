@@ -1,4 +1,13 @@
 .header{
     background: #363636;
     color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 21;
+}
+
+@media(min-width: 700px){
+    .header{
+        padding: 0;
+    }
 }
