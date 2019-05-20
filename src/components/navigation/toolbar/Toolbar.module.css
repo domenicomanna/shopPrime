@@ -1,0 +1,27 @@
+.navigation{
+    position: relative;
+}
+
+.brand{
+    margin: 0;
+}
+
+.hamburger{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+
+@media(min-width: 800px){
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger{
+        display: none;
+    }
+}

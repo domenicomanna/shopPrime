@@ -1,8 +1,10 @@
 import React from 'react';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
-      <h1>hi</h1>
+      <Layout>
+      </Layout>
   );
 }
 

@@ -1,0 +1,13 @@
+.navigationList{
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+@media(min-width: 800px){
+    .navigationList{
+        display: flex;
+        margin: 0;
+    }
+}
