@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './components/layout/Layout';
-import ProductContainer from './components/productContainer/ProductContainer';
+import ProductContainer from './containers/ProductContainer/ProductContainer'
 
 function App() {
     return (

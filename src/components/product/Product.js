@@ -1,17 +1,21 @@
 import React, { Fragment } from 'react';
 import Button from '../Button/Button'
 import styles from './Product.module.css';
-import photo from '../../assets/images/image.jpg'
+
+let images = require.context('../../assets/images', true);
 
 const Product = (props) => {
+    let imagePath = images('./image.jpg');
+
     return (
         <Fragment>
             <div className={styles.imageWrapper}>
-                <img className={styles.image} src={photo}></img>
+                <img className={styles.image} src={imagePath}></img>
             </div>
+            
             <div className = {styles.productDetails}>
-                <p className = {styles.productDetail}> Suit jacket </p>
-                <p className = {[styles.productDetail, styles.price].join(' ')}> $28.44</p>
+                <p className = {styles.productDetail}> {props.description} </p>
+                <p className = {[styles.productDetail, styles.price].join(' ')}> {props.price} </p>
                 <Button>Add To Cart</Button>
             </div>
         </Fragment>

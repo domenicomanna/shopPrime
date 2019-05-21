@@ -1,6 +1,7 @@
 .grid{
     --columns: 1fr
 }
+
 .grid{
     display: grid;
     grid-template-columns: var(--columns);
