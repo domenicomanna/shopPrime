@@ -8,4 +8,11 @@
     background: #49c35d;
     color: #fff;
     font-size: inherit;
+    transition: .3s;
+}
+
+@media(any-hover: hover){
+    .button:hover{
+        transform: scale(1.1);
+    }
 }

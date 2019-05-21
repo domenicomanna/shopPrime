@@ -8,6 +8,16 @@ const ProductContainer = () => {
             <div className={styles.grid}>
                 <div> <Product /> </div>
                 <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
+                <div> <Product /> </div>
             </div>
         </Wrapper>
     );
