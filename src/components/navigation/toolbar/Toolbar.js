@@ -7,7 +7,7 @@ const Toolbar = (props) => {
     return (
         <Wrapper>
             <nav className={styles.navigation}>
-                <h1 className={styles.brand}> ShopPrime </h1>
+                <h1 className={styles.brand}> <span className = {styles.hilight}>Shop</span>Prime </h1>
                 <i
                     onClick={props.toggleMobileNavItems}
                     className={['fas fa-bars', styles.hamburger].join(' ')}>

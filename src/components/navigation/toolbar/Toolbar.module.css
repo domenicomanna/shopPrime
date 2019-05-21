@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+.hilight{
+    color: #49c35d;
+}
+
 .hamburger{
     font-size: 1.3rem;
     position: absolute;

@@ -22,7 +22,8 @@ class Layout extends Component {
                 </header>
 
                 <Backdrop shouldBeVisible={this.state.mobileNavItemsShouldShow}
-                clicked = {this.toggleMobileNavItems} />
+                clicked = {this.toggleMobileNavItems} 
+                opacity = {'highOpacity'}/>
 
                 {this.props.children}
             </Fragment>
