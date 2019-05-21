@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './Backdrop.module.css';
 
-const Backdrop = () => {
+const Backdrop = (props) => {
+    let visibilityStyle = props.shouldBeVisible ? { visibility: 'visible' } : { visibility: 'hidden' };
+
     return (
-        <div className = {styles.backdrop}></div>
+        <div
+            style={visibilityStyle}
+            className={styles.backdrop}
+            onClick={props.clicked} >
+        </div>
     );
 }
 
