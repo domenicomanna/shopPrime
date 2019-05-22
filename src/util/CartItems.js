@@ -18,4 +18,8 @@ export default class CartItems {
             
         return this.cartItems.reduce(totalPriceCalculator, 0);
     }
+
+    getCartItems(){
+        return JSON.parse(JSON.stringify(this.cartItems));
+    }
 }
