@@ -7,20 +7,29 @@
     border-radius: 5px;
     font-size: inherit;
     transition: .3s;
+    color: #fff;
 }
 
 .button--add{
     background: #49c35d;
-    color: #fff;
 }
 
 .button--checkout{
     background: #3a9c4a;
-    color: #fff;
 }
 
 @media(any-hover: hover){
     .button:hover{
-        transform: scale(1.1);
+        transform: scale(1.15);
     }
+}
+
+.button--disabled{
+    cursor: auto;
+    background: #bdbdbd;
+
+}
+
+.button--disabled:hover{
+    transform: none;
 }
