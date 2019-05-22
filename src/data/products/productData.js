@@ -2,6 +2,10 @@ export default class ProductData{
     constructor(){
         this.products = getAllProducts();
     }
+
+    getProduct(index){
+        return this.products[index];
+    }
 }
 
 function getAllProducts(){
