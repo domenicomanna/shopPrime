@@ -5,7 +5,9 @@ import Button from '../../components/Button/Button';
 import Wrapper from '../../components/wrapper/Wrapper';
 import ProductData from '../../data/products/productData';
 import CartItems from '../../util/CartItems';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { css } from 'glamor'
 import styles from './ProductContainer.module.css';
 
 class ProductContainer extends Component {
@@ -20,10 +22,22 @@ class ProductContainer extends Component {
     addItemToCartHandler = itemIndex => {
         let itemToAdd = this.productData.getProduct(itemIndex);
         this.cartItems.add(itemToAdd);
+        this.displayToast();
 
         this.setState({
             itemsToPurchase: this.cartItems.getCartItems(),
             itemAddedToCart: true
+        })
+    }
+
+    displayToast(){
+        toast('Item added',{
+            position: "top-center",
+            autoClose: 3000,
+            className: css({
+                color: '#000',
+                borderRadius: '5px'
+            })
         })
     }
 
