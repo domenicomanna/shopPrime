@@ -20,8 +20,8 @@ function transformAllProducts(products) {
     return products.map((product, index) => {
         
         return (
-            <div>
-                <Product key={product.id}
+            <div key={product.id}>
+                <Product
                     imageName={product.imageName}
                     description={product.description}
                     price={product.price} />

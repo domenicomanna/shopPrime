@@ -5,7 +5,7 @@ import styles from './Product.module.css';
 let images = require.context('../../assets/images', true);
 
 const Product = (props) => {
-    let imagePath = images('./image.jpg');
+    let imagePath = images(`./${props.imageName}`);
 
     return (
         <Fragment>
@@ -15,7 +15,7 @@ const Product = (props) => {
             
             <div className = {styles.productDetails}>
                 <p className = {styles.productDetail}> {props.description} </p>
-                <p className = {[styles.productDetail, styles.price].join(' ')}> {props.price} </p>
+                <p className = {[styles.productDetail, styles.price].join(' ')}> ${props.price} </p>
                 <Button>Add To Cart</Button>
             </div>
         </Fragment>
