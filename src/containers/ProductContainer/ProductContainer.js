@@ -15,8 +15,7 @@ class ProductContainer extends Component {
     cartItems = new CartItems();
 
     state = {
-        itemsToPurchase: this.cartItems.getCartItems(),
-        itemAddedToCart: false
+        itemsToPurchase: this.cartItems.getCartItems()
     }
 
     addItemToCartHandler = itemIndex => {
@@ -31,7 +30,7 @@ class ProductContainer extends Component {
     }
 
     displayToast(){
-        toast('Item added',{
+        toast('Item added to cart',{
             position: "top-center",
             autoClose: 3000,
             className: css({
