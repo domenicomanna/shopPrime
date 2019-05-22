@@ -5,7 +5,7 @@ export default class ProductData{
 }
 
 function getAllProducts(){
-    let products = [
+    return [
         createProduct(1, 'blackSuit.jpg', 'Fine black suit', 99.99),
         createProduct(2, 'blackSuitJacket.jpg', 'Black suit jacket', 49.99),
         createProduct(3, 'blueShirt.jpg', 'Blue long sleeve shirt', 19.99),
@@ -19,8 +19,6 @@ function getAllProducts(){
         createProduct(11, 'simpsonsShirt.jpg', 'Fun Simpsons Shirt', 9.99),
         createProduct(12, 'vest.jpg', 'Grey Vest', 29.99),
     ]
-
-    return products;
 }
 
 function createProduct(id, imageName, description, price){

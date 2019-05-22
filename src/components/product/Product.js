@@ -15,7 +15,7 @@ const Product = (props) => {
             
             <div className = {styles.productDetails}>
                 <p className = {styles.productDetail}> {props.description} </p>
-                <p className = {[styles.productDetail, styles.price].join(' ')}> ${props.price} </p>
+                <p className = {styles.price}> ${props.price} </p>
                 <Button>Add To Cart</Button>
             </div>
         </Fragment>
