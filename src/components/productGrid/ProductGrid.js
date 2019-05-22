@@ -1,16 +1,13 @@
 import React from 'react';
 import styles from './ProductGrid.module.css';
 import Product from '../product/Product';
-import Wrapper from '../wrapper/Wrapper';
 
 const ProductGrid = (props) => {
     let transformedProducts = transformAllProducts(props.products);
     return (
-        <Wrapper>
             <div className={styles.grid}>
                 {transformedProducts}
             </div>
-        </Wrapper>
     );
 }
 

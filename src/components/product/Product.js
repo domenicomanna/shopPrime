@@ -16,7 +16,7 @@ const Product = (props) => {
             <div className = {styles.productDetails}>
                 <p className = {styles.productDetail}> {props.description} </p>
                 <p className = {styles.price}> ${props.price} </p>
-                <Button>Add To Cart</Button>
+                <Button buttonType = "button--add"> Add To Cart</Button>
             </div>
         </Fragment>
         );

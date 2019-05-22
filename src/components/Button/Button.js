@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './Button.module.css';
 
 const Button = (props) => {
+    let buttonClasses = `${styles.button} ${styles[props.buttonType]}`;
+
     return ( 
-        <button className = {styles.button}> {props.children} </button>
+        <button className = {buttonClasses}> {props.children} </button>
      );
 }
  

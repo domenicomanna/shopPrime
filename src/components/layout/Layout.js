@@ -25,7 +25,7 @@ class Layout extends Component {
                 clicked = {this.toggleMobileNavItems} 
                 opacity = {'highOpacity'}/>
 
-                <main> {this.props.children} </main>
+                <main className = {styles.mainContent}> {this.props.children} </main>
             </Fragment>
         );
     }

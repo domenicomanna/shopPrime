@@ -5,10 +5,18 @@
     outline: none;
     border: none;
     border-radius: 5px;
-    background: #49c35d;
-    color: #fff;
     font-size: inherit;
     transition: .3s;
+}
+
+.button--add{
+    background: #49c35d;
+    color: #fff;
+}
+
+.button--checkout{
+    background: red;
+    color: #fff;
 }
 
 @media(any-hover: hover){
