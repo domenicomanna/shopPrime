@@ -22,4 +22,8 @@ export default class CartItems {
     getCartItems(){
         return JSON.parse(JSON.stringify(this.cartItems));
     }
+
+    clearAll(){
+        this.cartItems = [];
+    }
 }

@@ -10,7 +10,7 @@ const OrderSummary = (props) => {
             <SummaryTable itemsToPurchase = {props.itemsToPurchase}/>
             <p className = {styles.totalPrice}>Total: ${props.totalPrice}</p>
             <div className = {styles.buttonWrapper}>
-                <Button buttonType = 'button--primary'> Pay Now</Button>
+                <Button clicked = {props.payNow} buttonType = 'button--primary'> Pay Now</Button>
                 <Button clicked = {props.continueShopping} buttonType = 'button--primary'> Continue Shopping</Button>
             </div>
         </Fragment>

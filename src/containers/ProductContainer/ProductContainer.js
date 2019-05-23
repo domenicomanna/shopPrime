@@ -19,7 +19,7 @@ class ProductContainer extends Component {
     state = {
         itemsToPurchase: this.cartItems.getCartItems(),
         checkoutButtonWasClicked: false,
-        payNowButtonWasClicked: true
+        payNowButtonWasClicked: false
     }
 
     addItemToCartHandler = itemIndex => {
@@ -50,7 +50,8 @@ class ProductContainer extends Component {
         this.setState({ checkoutButtonWasClicked: !previousCheckoutButtonState })
     }
 
-    toggleOrderConfirmation = _ => {
+    toggleOrderConfirmationHandler = _ => {
+        if (this.state.checkoutButtonWasClicked) this.toggleOrderSummary();
         let previousPayNowButtonState = this.state.payNowButtonWasClicked;
         this.setState({ payNowButtonWasClicked: !previousPayNowButtonState })
     }
@@ -60,6 +61,8 @@ class ProductContainer extends Component {
             'button--disabled' : 'button--checkout');
 
         let totalPrice = this.cartItems.getTotalPrice().toFixed(2);
+        
+        if (this.state.payNowButtonWasClicked) this.cartItems.clearAll();
 
         return (
             <Wrapper>
@@ -67,10 +70,11 @@ class ProductContainer extends Component {
                     shouldBeVisible={this.state.checkoutButtonWasClicked}>
                     <OrderSummary itemsToPurchase={this.state.itemsToPurchase}
                         totalPrice={totalPrice}
-                        continueShopping={this.toggleOrderSummary} />
+                        continueShopping={this.toggleOrderSummary}
+                        payNow={this.toggleOrderConfirmationHandler} />
                 </Modal>
 
-                <Modal toggleModal={this.toggleOrderConfirmation}
+                <Modal toggleModal={this.toggleOrderConfirmationHandler}
                     shouldBeVisible={this.state.payNowButtonWasClicked}>
                     <p>Thank you for your payment of ${totalPrice} </p>
                 </Modal>
@@ -81,6 +85,7 @@ class ProductContainer extends Component {
                 <div className={styles.checkoutButtonWrapper}>
                     <Button clicked={this.toggleOrderSummary} buttonType={checkoutButtonType}>Checkout</Button>
                 </div>
+
             </Wrapper>
         )
     }
