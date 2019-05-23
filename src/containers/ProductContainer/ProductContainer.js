@@ -55,6 +55,7 @@ class ProductContainer extends Component {
             <Wrapper>
                 <Modal toggleModal={this.toggleModal}
                     shouldBeVisible={this.state.checkoutButtonWasClicked}>
+                        <h1>hiiii</h1>
                 </Modal>
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}

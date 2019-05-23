@@ -11,11 +11,17 @@ const Modal = (props) => {
         <Fragment>
             <div className={modalClasses.join(' ')}>
                 <div className={styles.exitIconWrapper}>
-                    <i onClick = {props.toggleModal} className={`fas fa-times ${styles.exitIcon}`}></i>
+                    <i onClick={props.toggleModal}
+                        className={`fas fa-times ${styles.exitIcon}`}>
+                    </i>
                 </div>
                 {props.children}
             </div>
-            <Backdrop shouldBeVisible={props.shouldBeVisible} opacity={'lowOpacity'} />
+
+            <Backdrop clicked={props.toggleModal}
+                shouldBeVisible={props.shouldBeVisible}
+                opacity={'lowOpacity'} />
+
         </Fragment>
     );
 }
