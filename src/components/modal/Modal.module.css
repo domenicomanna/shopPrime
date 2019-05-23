@@ -13,12 +13,14 @@
     opacity: 0;
     z-index: 21;
     transition: .3s;
+    pointer-events: none;
 }
 
 .modalActive{
     transform: translate(-50%, -50%) scale(1.2);
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 .exitIconWrapper{
     text-align: right;

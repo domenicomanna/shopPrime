@@ -16,7 +16,7 @@ const Product = (props) => {
             <div className = {styles.productDetails}>
                 <p className = {styles.productDetail}> {props.description} </p>
                 <p className = {styles.price}> ${props.price} </p>
-                <Button buttonType = "button--add" clicked = {props.addItemToCart}> Add To Cart</Button>
+                <Button buttonType = "button--primary" clicked = {props.addItemToCart}> Add To Cart</Button>
             </div>
         </Fragment>
         );

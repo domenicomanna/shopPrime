@@ -3,3 +3,18 @@
     text-align: center;
 }
 
+.buttonWrapper{
+    text-align: center;
+}
+
+.buttonWrapper > *:first-child{
+    margin: 0 1rem 1rem 0;
+}
+
+@media(min-width: 450px){
+    .buttonWrapper > *:first-child{
+        margin: 0 1rem 0 0;
+    }
+}
+
+

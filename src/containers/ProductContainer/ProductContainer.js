@@ -57,8 +57,10 @@ class ProductContainer extends Component {
                 <Modal toggleModal={this.toggleModal}
                     shouldBeVisible={this.state.checkoutButtonWasClicked}>
                     <OrderSummary itemsToPurchase = {this.state.itemsToPurchase}
-                    totalPrice = {this.cartItems.getTotalPrice().toFixed(2)}/>
+                    totalPrice = {this.cartItems.getTotalPrice().toFixed(2)}
+                    continueShopping = {this.toggleModal}/>
                 </Modal>
+                
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}
                     addItemToCart={this.addItemToCartHandler} />
