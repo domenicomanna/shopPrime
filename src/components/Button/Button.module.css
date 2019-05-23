@@ -27,6 +27,7 @@
 .button--disabled{
     cursor: auto;
     background: #bdbdbd;
+    pointer-events: none;
 
 }
 

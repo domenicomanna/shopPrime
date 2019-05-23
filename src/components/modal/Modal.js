@@ -1,18 +1,21 @@
 import React, { Fragment } from 'react';
 import styles from './Modal.module.css';
 import Backdrop from '../backdrop/Backdrop';
+
 const Modal = (props) => {
+    let modalClasses = [styles.modal];
+    if (props.shouldBeVisible) modalClasses.push(styles.modalActive);
+
     return (
 
         <Fragment>
-            <div className={[styles.modal, styles.modalActive].join(' ')}>
+            <div className={modalClasses.join(' ')}>
                 <div className={styles.exitIconWrapper}>
-                    <i className={`fas fa-times ${styles.exitIcon}`}></i>
+                    <i onClick = {props.toggleModal} className={`fas fa-times ${styles.exitIcon}`}></i>
                 </div>
-                
                 {props.children}
             </div>
-            <Backdrop shouldBeVisible={true} opacity={'lowOpacity'} />
+            <Backdrop shouldBeVisible={props.shouldBeVisible} opacity={'lowOpacity'} />
         </Fragment>
     );
 }

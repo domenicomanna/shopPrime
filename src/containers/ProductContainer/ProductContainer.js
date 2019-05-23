@@ -16,7 +16,8 @@ class ProductContainer extends Component {
     cartItems = new CartItems();
 
     state = {
-        itemsToPurchase: this.cartItems.getCartItems()
+        itemsToPurchase: this.cartItems.getCartItems(),
+        checkoutButtonWasClicked: false
     }
 
     addItemToCartHandler = itemIndex => {
@@ -30,15 +31,20 @@ class ProductContainer extends Component {
         })
     }
 
-    displayToast(){
-        toast('Item added to cart',{
+    displayToast() {
+        toast('Item added to cart. Checkout at the bottom of the page', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 5000,
             className: css({
                 color: '#000',
                 borderRadius: '5px'
             })
         })
+    }
+
+    toggleModal = _ => {
+        let previousCheckoutButtonState = this.state.checkoutButtonWasClicked;
+        this.setState({ checkoutButtonWasClicked: !previousCheckoutButtonState })
     }
 
     render() {
@@ -47,12 +53,14 @@ class ProductContainer extends Component {
 
         return (
             <Wrapper>
-                <Modal></Modal>
+                <Modal toggleModal={this.toggleModal}
+                    shouldBeVisible={this.state.checkoutButtonWasClicked}>
+                </Modal>
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}
                     addItemToCart={this.addItemToCartHandler} />
                 <div className={styles.checkoutButtonWrapper}>
-                    <Button buttonType={checkoutButtonType}>Checkout</Button>
+                    <Button clicked = {this.toggleModal} buttonType={checkoutButtonType}>Checkout</Button>
                 </div>
             </Wrapper>
         )
