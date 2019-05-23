@@ -6,6 +6,7 @@ import Wrapper from '../../components/wrapper/Wrapper';
 import ProductData from '../../data/products/productData';
 import CartItems from '../../util/CartItems';
 import Modal from '../../components/modal/Modal';
+import OrderSummary from '../../components/orderSummary/OrderSummary';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { css } from 'glamor'
@@ -55,13 +56,14 @@ class ProductContainer extends Component {
             <Wrapper>
                 <Modal toggleModal={this.toggleModal}
                     shouldBeVisible={this.state.checkoutButtonWasClicked}>
-                        <h1>hiiii</h1>
+                    <OrderSummary itemsToPurchase = {this.state.itemsToPurchase}
+                    totalPrice = {this.cartItems.getTotalPrice().toFixed(2)}/>
                 </Modal>
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}
                     addItemToCart={this.addItemToCartHandler} />
                 <div className={styles.checkoutButtonWrapper}>
-                    <Button clicked = {this.toggleModal} buttonType={checkoutButtonType}>Checkout</Button>
+                    <Button clicked={this.toggleModal} buttonType={checkoutButtonType}>Checkout</Button>
                 </div>
             </Wrapper>
         )
