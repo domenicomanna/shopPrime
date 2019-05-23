@@ -18,7 +18,8 @@ class ProductContainer extends Component {
 
     state = {
         itemsToPurchase: this.cartItems.getCartItems(),
-        checkoutButtonWasClicked: false
+        checkoutButtonWasClicked: false,
+        payNowButtonWasClicked: true
     }
 
     addItemToCartHandler = itemIndex => {
@@ -38,34 +39,47 @@ class ProductContainer extends Component {
             autoClose: 3000,
             className: css({
                 color: '#000',
-                borderRadius: '5px'
+                borderRadius: '5px',
+                lineHeight: 1.6
             })
         })
     }
 
-    toggleModal = _ => {
+    toggleOrderSummary = _ => {
         let previousCheckoutButtonState = this.state.checkoutButtonWasClicked;
         this.setState({ checkoutButtonWasClicked: !previousCheckoutButtonState })
+    }
+
+    toggleOrderConfirmation = _ => {
+        let previousPayNowButtonState = this.state.payNowButtonWasClicked;
+        this.setState({ payNowButtonWasClicked: !previousPayNowButtonState })
     }
 
     render() {
         let checkoutButtonType = (this.state.itemsToPurchase.length === 0 ?
             'button--disabled' : 'button--checkout');
 
+        let totalPrice = this.cartItems.getTotalPrice().toFixed(2);
+
         return (
             <Wrapper>
-                <Modal toggleModal={this.toggleModal}
+                <Modal toggleModal={this.toggleOrderSummary}
                     shouldBeVisible={this.state.checkoutButtonWasClicked}>
-                    <OrderSummary itemsToPurchase = {this.state.itemsToPurchase}
-                    totalPrice = {this.cartItems.getTotalPrice().toFixed(2)}
-                    continueShopping = {this.toggleModal}/>
+                    <OrderSummary itemsToPurchase={this.state.itemsToPurchase}
+                        totalPrice={totalPrice}
+                        continueShopping={this.toggleOrderSummary} />
                 </Modal>
-                
+
+                <Modal toggleModal={this.toggleOrderConfirmation}
+                    shouldBeVisible={this.state.payNowButtonWasClicked}>
+                    <p>Thank you for your payment of ${totalPrice} </p>
+                </Modal>
+
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}
                     addItemToCart={this.addItemToCartHandler} />
                 <div className={styles.checkoutButtonWrapper}>
-                    <Button clicked={this.toggleModal} buttonType={checkoutButtonType}>Checkout</Button>
+                    <Button clicked={this.toggleOrderSummary} buttonType={checkoutButtonType}>Checkout</Button>
                 </div>
             </Wrapper>
         )
