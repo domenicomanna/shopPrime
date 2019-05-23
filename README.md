@@ -1,6 +1,6 @@
 ShopPrime
 ======
-A React application to simulate a store. Allows the user to add products to his/her cart and displays an order summary to the user after the user has finished shopping.
+A React application that simulates a store. Allows the user to add products to his/her cart and displays an order summary to the user after he/she has finished shopping.
 
 Built With
 ------
