@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shopPrime/static/css/main.57c723e5.chunk.css",
+    "main.js": "/shopPrime/static/js/main.ce992cff.chunk.js",
+    "main.js.map": "/shopPrime/static/js/main.ce992cff.chunk.js.map",
+    "runtime~main.js": "/shopPrime/static/js/runtime~main.7e068ea3.js",
+    "runtime~main.js.map": "/shopPrime/static/js/runtime~main.7e068ea3.js.map",
+    "static/css/2.39017165.chunk.css": "/shopPrime/static/css/2.39017165.chunk.css",
+    "static/js/2.330d833e.chunk.js": "/shopPrime/static/js/2.330d833e.chunk.js",
+    "static/js/2.330d833e.chunk.js.map": "/shopPrime/static/js/2.330d833e.chunk.js.map",
+    "index.html": "/shopPrime/index.html",
+    "precache-manifest.3ca863387cae61dce9a07913870aecc4.js": "/shopPrime/precache-manifest.3ca863387cae61dce9a07913870aecc4.js",
+    "service-worker.js": "/shopPrime/service-worker.js",
+    "static/css/2.39017165.chunk.css.map": "/shopPrime/static/css/2.39017165.chunk.css.map",
+    "static/css/main.57c723e5.chunk.css.map": "/shopPrime/static/css/main.57c723e5.chunk.css.map",
+    "static/media/blackSuit.jpg": "/shopPrime/static/media/blackSuit.b2d49644.jpg",
+    "static/media/blackSuitJacket.jpg": "/shopPrime/static/media/blackSuitJacket.b12287ec.jpg",
+    "static/media/blackSuitWithBowtie.jpg": "/shopPrime/static/media/blackSuitWithBowtie.a65b12c3.jpg",
+    "static/media/blueShirt.jpg": "/shopPrime/static/media/blueShirt.5238d146.jpg",
+    "static/media/blueSuit.jpg": "/shopPrime/static/media/blueSuit.a821a5b0.jpg",
+    "static/media/crewWhite.jpg": "/shopPrime/static/media/crewWhite.bdf2a363.jpg",
+    "static/media/greyCollarShirt.jpg": "/shopPrime/static/media/greyCollarShirt.548d9cd9.jpg",
+    "static/media/greySuitJacket.jpg": "/shopPrime/static/media/greySuitJacket.737c7cd7.jpg",
+    "static/media/leatherJacket.jpg": "/shopPrime/static/media/leatherJacket.25d29dc9.jpg",
+    "static/media/rainZipUp.jpg": "/shopPrime/static/media/rainZipUp.2240a6e5.jpg",
+    "static/media/simpsonsShirt.jpg": "/shopPrime/static/media/simpsonsShirt.21618fcf.jpg",
+    "static/media/vest.jpg": "/shopPrime/static/media/vest.32cfd6f5.jpg"
+  }
+}
