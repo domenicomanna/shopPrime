@@ -5,6 +5,7 @@ import Button from '../../components/Button/Button';
 import Wrapper from '../../components/wrapper/Wrapper';
 import ProductData from '../../data/products/productData';
 import CartItems from '../../util/CartItems';
+import Modal from '../../components/modal/Modal';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { css } from 'glamor'
@@ -46,6 +47,7 @@ class ProductContainer extends Component {
 
         return (
             <Wrapper>
+                <Modal></Modal>
                 <SectionTitle> Shop the latest trends </SectionTitle>
                 <ProductGrid products={this.productData.products}
                     addItemToCart={this.addItemToCartHandler} />

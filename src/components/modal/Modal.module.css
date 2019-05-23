@@ -1,0 +1,21 @@
+.modal{
+    position: fixed;
+    width: 500px;
+    max-width: 80%;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 1rem;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.modalActive{
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+    visibility: visible;
+}
