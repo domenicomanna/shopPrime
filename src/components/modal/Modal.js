@@ -6,10 +6,13 @@ const Modal = (props) => {
 
         <Fragment>
             <div className={[styles.modal, styles.modalActive].join(' ')}>
-                <h1>hi</h1>
+                <div className={styles.exitIconWrapper}>
+                    <i className={`fas fa-times ${styles.exitIcon}`}></i>
+                </div>
+                
                 {props.children}
             </div>
-            <Backdrop shouldBeVisible = {true} opacity = {'lowOpacity'}/>
+            <Backdrop shouldBeVisible={true} opacity={'lowOpacity'} />
         </Fragment>
     );
 }

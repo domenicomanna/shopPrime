@@ -20,3 +20,19 @@
     opacity: 1;
     visibility: visible;
 }
+.exitIconWrapper{
+    text-align: right;
+}
+
+.exitIcon{
+    display: inline-block;
+    padding: .2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media(any-hover: hover){
+    .exitIcon:hover{
+        opacity: .5;
+    }
+}
