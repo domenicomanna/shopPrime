@@ -57,12 +57,13 @@ class ProductContainer extends Component {
     }
 
     render() {
-        let checkoutButtonType = (this.state.itemsToPurchase.length === 0 ?
-            'button--disabled' : 'button--checkout');
 
         let totalPrice = this.cartItems.getTotalPrice().toFixed(2);
         
         if (this.state.payNowButtonWasClicked) this.cartItems.clearAll();
+
+        let checkoutButtonType = (this.cartItems.getCartItems().length === 0 ?
+            'button--disabled' : 'button--checkout');
 
         return (
             <Wrapper>
