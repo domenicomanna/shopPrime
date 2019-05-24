@@ -66,7 +66,7 @@ class ProductContainer extends Component {
             'button--disabled' : 'button--checkout');
 
         let confirmationMessage = (totalPrice <= 0 ?
-            'Thank you for your payment' : `Thank you for your payment of ${totalPrice}`);
+            'Thank you for your payment' : `Thank you for your payment of $${totalPrice}`);
 
         return (
             <Wrapper>
