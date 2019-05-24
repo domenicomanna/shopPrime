@@ -8,9 +8,8 @@ const NavigationItems = (props) => {
     
     return (  
         <ul className = {listClasses.join(' ')}>
-            <NavigationItem> Random Link 1 </NavigationItem>
-            <NavigationItem> Random Link 2 </NavigationItem>
-            <NavigationItem> Random Link 3 </NavigationItem>
+            <NavigationItem> Home </NavigationItem>
+            <NavigationItem> Order History </NavigationItem>
         </ul>
     );
 }
