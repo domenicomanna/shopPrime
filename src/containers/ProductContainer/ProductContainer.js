@@ -59,11 +59,14 @@ class ProductContainer extends Component {
     render() {
 
         let totalPrice = this.cartItems.getTotalPrice().toFixed(2);
-        
+
         if (this.state.payNowButtonWasClicked) this.cartItems.clearAll();
 
         let checkoutButtonType = (this.cartItems.getCartItems().length === 0 ?
             'button--disabled' : 'button--checkout');
+
+        let confirmationMessage = (totalPrice <= 0 ?
+            'Thank you for your payment' : `Thank you for your payment of ${totalPrice}`);
 
         return (
             <Wrapper>
@@ -77,7 +80,7 @@ class ProductContainer extends Component {
 
                 <Modal toggleModal={this.toggleOrderConfirmationHandler}
                     shouldBeVisible={this.state.payNowButtonWasClicked}>
-                    <p>Thank you for your payment of ${totalPrice} </p>
+                    <p> {confirmationMessage} </p>
                 </Modal>
 
                 <SectionTitle> Shop the latest trends </SectionTitle>
