@@ -1,14 +1,8 @@
 .header{
     background: #444;
     color: #fff;
-    padding: 1rem 0;
+    padding: .5rem 0;
+    font-size: 1.3rem;
     position: relative;
     z-index: 21;
-
-}
-
-@media(min-width: 700px){
-    .header{
-        padding: 0;
-    }
 }
